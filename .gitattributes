@@ -9,6 +9,7 @@
 .travis/         export-ignore
 CHANGELOG.md     export-ignore
 composer.lock    export-ignore
+di.php           export-ignore
 phpunit.xml      export-ignore
 README.md        export-ignore
 tests/           export-ignore
