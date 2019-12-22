@@ -762,16 +762,16 @@
         },
         {
             "name": "rquadling/reflection",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rquadling/reflection.git",
-                "reference": "2c8c905aa3c394fa5a6608c81e21f4d09b39eabd"
+                "reference": "2c10fa9d7b3e957569f4d7f0f52fc8a2ad279949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rquadling/reflection/zipball/2c8c905aa3c394fa5a6608c81e21f4d09b39eabd",
-                "reference": "2c8c905aa3c394fa5a6608c81e21f4d09b39eabd",
+                "url": "https://api.github.com/repos/rquadling/reflection/zipball/2c10fa9d7b3e957569f4d7f0f52fc8a2ad279949",
+                "reference": "2c10fa9d7b3e957569f4d7f0f52fc8a2ad279949",
                 "shasum": ""
             },
             "require": {
@@ -797,7 +797,7 @@
                 }
             ],
             "description": "A small set of enhancements to PHP's standard Reflection classes",
-            "time": "2019-12-22T00:43:25+00:00"
+            "time": "2019-12-22T01:51:17+00:00"
         },
         {
             "name": "seld/jsonlint",
