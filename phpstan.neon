@@ -1,0 +1,3 @@
+parameters:
+    ignoreErrors:
+        - '#Property RQuadlingTests\\DependencyInjection\\Fixtures\\UsesDelayedInjectWithManualDependencies::\$missingFixture has unknown class RQuadlingTests\\DependencyInjection\\Fixtures\\MissingFixture as its type#'
