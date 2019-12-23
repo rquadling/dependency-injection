@@ -20,3 +20,7 @@ Using Composer:
 ```sh
 composer require rquadling/dependency-injection
 ```
+
+## DI config
+
+Create a `di.php` file in the root of your project to define your dependencies.

@@ -26,10 +26,10 @@
 
 namespace RQuadling\DependencyInjection;
 
-use Composer\Factory;
 use DI\Container;
 use DI\ContainerBuilder;
 use Exception;
+use RQuadling\Environment\Environment;
 
 class ContainerFactory
 {
@@ -49,7 +49,7 @@ class ContainerFactory
         static $config;
 
         if (empty($config)) {
-            $config = \sprintf('%s/di.php', \dirname(Factory::getComposerFile()));
+            $config = \sprintf('%s/di.php', Environment::getRoot());
         }
 
         if (!$container instanceof Container || $forceRebuild) {

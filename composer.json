@@ -13,8 +13,8 @@
   },
   "require": {
     "php": "^7",
-    "composer/composer": "^1.9",
     "php-di/php-di": "^6.0",
+    "rquadling/environment": "^1.0.0",
     "rquadling/reflection": "^1.0.0"
   },
   "require-dev": {
