@@ -33,20 +33,16 @@ class UsesDelayedInject
     use DelayedInjectionTrait;
 
     /**
-     * @var Fixture
      * @DelayedInject
      */
-    protected $fixture;
+    protected Fixture $fixture;
 
-    public function handleDelayedInjectionCaller()
+    public function handleDelayedInjectionCaller(): void
     {
         $this->handleDelayedInjection();
     }
 
-    /**
-     * @return Fixture|null
-     */
-    public function getFixture()
+    public function getFixture(): Fixture
     {
         return $this->fixture;
     }

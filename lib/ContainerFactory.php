@@ -36,7 +36,7 @@ class ContainerFactory
     /**
      * @param bool $forceRebuild This invalidates any pre-built dependencies.
      *                           PLEASE NOTE: It does not invalidate the definitions from which the dependencies are resolved!
-     * @param array $mocks Allow mocks to be injected when rebuilding the container
+     * @param array<string, mixed> $mocks Allow mocks to be injected when rebuilding the container
      *
      * @throws Exception
      */

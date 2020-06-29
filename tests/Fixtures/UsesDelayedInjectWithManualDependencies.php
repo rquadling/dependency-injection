@@ -39,6 +39,9 @@ class UsesDelayedInjectWithManualDependencies extends UsesDelayedInject
      */
     protected $untyped;
 
+    /**
+     * @return ?MissingFixture
+     */
     public function getMissingFixture()
     {
         return $this->missingFixture;
