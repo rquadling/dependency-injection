@@ -34,16 +34,15 @@ use RQuadlingTests\DependencyInjection\Fixtures\UsesDelayedInjectWithManualDepen
 
 class DelayedInjectionTest extends TestCase
 {
-    public function testDelayedInjection()
+    public function testDelayedInjection(): void
     {
         $instance = new UsesDelayedInject();
 
-        $this->assertNull($instance->getFixture());
         $instance->handleDelayedInjectionCaller();
         $this->assertInstanceOf(Fixture::class, $instance->getFixture());
     }
 
-    public function testDelayedInjectionRequiresManualDependencies()
+    public function testDelayedInjectionRequiresManualDependencies(): void
     {
         $instance = new UsesDelayedInjectWithManualDependencies();
 

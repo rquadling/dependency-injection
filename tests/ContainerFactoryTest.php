@@ -34,12 +34,12 @@ use RQuadlingTests\DependencyInjection\Fixtures\Fixture;
 
 class ContainerFactoryTest extends TestCase
 {
-    public function testBuild()
+    public function testBuild(): void
     {
         $this->assertInstanceOf(Container::class, ContainerFactory::build());
     }
 
-    public function testRebuild()
+    public function testRebuild(): void
     {
         $containers = [
             ContainerFactory::build(false),
@@ -56,7 +56,7 @@ class ContainerFactoryTest extends TestCase
         $this->assertNotSame($containers[2], $containers[3]);
     }
 
-    public function testRebuildWithMocks()
+    public function testRebuildWithMocks(): void
     {
         $mocks = [
             'Mocked' => new Fixture(),

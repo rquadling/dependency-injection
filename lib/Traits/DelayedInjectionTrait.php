@@ -37,12 +37,9 @@ use Throwable;
 
 trait DelayedInjectionTrait
 {
-    /**
-     * @var Container
-     */
-    protected $container;
+    protected Container $container;
 
-    protected function handleDelayedInjection()
+    protected function handleDelayedInjection(): void
     {
         $this->loadManualDependencies($this->loadAutomaticDependencies());
     }
@@ -73,7 +70,14 @@ trait DelayedInjectionTrait
                     if (!$property->isPublic()) {
                         $property->setAccessible(true);
                     }
-                    $class = $docblockParser->getPropertyClass($property);
+                    $type = $property->getType();
+                    // Even though ReflectionProperty::getType() is documented as returning a ReflectionType, it
+                    // actually returns a ReflectionNamedType which has the ReflectionNamedType::getName() method.
+                    if ($type instanceof \ReflectionNamedType) {
+                        $class = $type->getName();
+                    } else {
+                        $class = $docblockParser->getPropertyClass($property);
+                    }
                     if ($class) {
                         $property->setValue($this, $this->container->get($class));
                     } else {
@@ -95,7 +99,7 @@ trait DelayedInjectionTrait
      *
      * @throws NotFoundException
      */
-    protected function loadManualDependencies(array $manualDependencies = [])
+    protected function loadManualDependencies(array $manualDependencies = []): void
     {
         if ($manualDependencies) {
             $calledClass = \get_called_class();

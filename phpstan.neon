@@ -1,3 +1,8 @@
 parameters:
     ignoreErrors:
+        # Explicitly testing a missing type for a property.
         - '#Property RQuadlingTests\\DependencyInjection\\Fixtures\\UsesDelayedInjectWithManualDependencies::\$missingFixture has unknown class RQuadlingTests\\DependencyInjection\\Fixtures\\MissingFixture as its type#'
+        # Explicitly testing an untyped property.
+        - '#Property RQuadlingTests\\DependencyInjection\\Fixtures\\UsesDelayedInjectWithManualDependencies::\$untyped has no typehint specified#'
+        # Explicitly testing an untyped property.
+        - '#Return typehint of method RQuadlingTests\\DependencyInjection\\Fixtures\\UsesDelayedInjectWithManualDependencies::getMissingFixture\(\) has invalid type RQuadlingTests\\DependencyInjection\\Fixtures\\MissingFixture#'
